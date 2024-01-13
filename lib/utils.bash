@@ -87,7 +87,7 @@ get_arch() {
   arch=$(uname -m)
   case $arch in
   "arm")
-    echo "armv7" # Super best effort - TODO: find useful way to split armv6/armv7 maybe
+    echo "armv7"
     ;;
   "aarch64" | "arm64")
     echo "arm64"
@@ -95,6 +95,9 @@ get_arch() {
   "i686")
     echo "i386"
     ;;
+  "x86-64")
+  	echo "amd64"
+  	;;
   *)
     echo "$arch"
     ;;
