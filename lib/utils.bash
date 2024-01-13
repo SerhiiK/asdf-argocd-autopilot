@@ -2,8 +2,7 @@
 
 set -euo pipefail
 
-# TODO: Ensure this is the correct GitHub homepage where releases can be downloaded for argocd-autopilot.
-GH_REPO="https://github.com/SerhiiK/argocd-autopilot"
+GH_REPO="https://github.com/argoproj-labs/argocd-autopilot"
 TOOL_NAME="argocd-autopilot"
 TOOL_TEST="argocd-autopilot --help"
 
