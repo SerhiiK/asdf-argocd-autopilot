@@ -22,5 +22,5 @@ tar -xzf "$release_file" -C "$ASDF_DOWNLOAD_PATH" || fail "Could not extract $re
 rm "$release_file"
 
 # Rename file
-rename="$(echo $release_file | rev | cut -d '-' -f2- | rev )"
-mv "$ASDF_DOWNLOAD_PATH/$(ls $ASDF_DOWNLOAD_PATH)" $rename
+rename="$(echo "$release_file" | rev | cut -d '-' -f2- | rev)"
+mv "$ASDF_DOWNLOAD_PATH/$(ls "$ASDF_DOWNLOAD_PATH")" "$rename"

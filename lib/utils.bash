@@ -41,8 +41,8 @@ download_release() {
 	url="$GH_REPO/releases/download/v${version}/argocd-autopilot-linux-amd64.tar.gz"
 
 	if [ ! -f "$filename" ]; then
-			echo "* Downloading $TOOL_NAME release $version..."
-			curl "${curl_opts[@]}" -o "$filename" -C - "$url" || fail "Could not download $url"
+		echo "* Downloading $TOOL_NAME release $version..."
+		curl "${curl_opts[@]}" -o "$filename" -C - "$url" || fail "Could not download $url"
 	else
 		echo "$TOOL_NAME $version already exists. No download needed."
 	fi
